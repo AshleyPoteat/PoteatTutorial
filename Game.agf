@@ -2199,7 +2199,7 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iCobra_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3">iCobra_UseInv</Event>
@@ -2217,10 +2217,10 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iBottle_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="3">iBottle_UseInv</Event>
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
@@ -2235,7 +2235,7 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iSnakewine_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -2244,7 +2244,7 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>5</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
+            <Description />
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>6</ID>
@@ -2253,7 +2253,7 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iDagger_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -2261,13 +2261,31 @@
             </Interactions>
           </InventoryItem>
           <InventoryItem>
-            <CursorImage>6</CursorImage>
+            <CursorImage>22</CursorImage>
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>7</ID>
-            <Image>6</Image>
+            <Image>22</Image>
             <Name>iPill</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties />
+            <Interactions>
+              <Event Index="0">iPill_Look</Event>
+              <Event Index="1"> </Event>
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>21</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>8</ID>
+            <Image>21</Image>
+            <Name>iCoins</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
@@ -2567,8 +2585,8 @@
             <Interactions>
               <Event Index="0" />
               <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="2">cMerchant_Talk</Event>
+              <Event Index="3">cMerchant_UseInv</Event>
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -2592,7 +2610,7 @@
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>5</NormalView>
             <Properties />
-            <RealName xml:space="preserve">New character</RealName>
+            <RealName>Mao</RealName>
             <ScriptName>cMao</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
@@ -2608,8 +2626,8 @@
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
             <Interactions>
               <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
+              <Event Index="1">cMao_Interact</Event>
+              <Event Index="2">cMao_Talk</Event>
               <Event Index="3" />
               <Event Index="4" />
               <Event Index="5" />
@@ -2640,8 +2658,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>64842</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>235</StartX>
-            <StartY>166</StartY>
+            <StartX>236</StartX>
+            <StartY>167</StartY>
             <StartingRoom>4</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -2651,7 +2669,7 @@
             <Interactions>
               <Event Index="0" />
               <Event Index="1" />
-              <Event Index="2" />
+              <Event Index="2">cPao_Talk</Event>
               <Event Index="3" />
               <Event Index="4" />
               <Event Index="5" />
@@ -2693,7 +2711,7 @@
             <Interactions>
               <Event Index="0" />
               <Event Index="1" />
-              <Event Index="2" />
+              <Event Index="2">cFei_Talk</Event>
               <Event Index="3" />
               <Event Index="4" />
               <Event Index="5" />
@@ -2734,8 +2752,8 @@
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
             <Interactions>
               <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
+              <Event Index="1">cJune_Interact</Event>
+              <Event Index="2">cJune_Talk</Event>
               <Event Index="3" />
               <Event Index="4" />
               <Event Index="5" />
@@ -2764,8 +2782,10 @@ return
 cLily: I'm guarding the lunar rabbit.
 return
 @2
-cLily: I'm Lily. The coolest and smartest guardian?
-return
+cLily:I'm Luo. The coolest and smartest guardian?
+cEgo:Is it okay that I take those coins?
+cLily:Of course dude.
+stop
 ]]></Script>
             <DialogOptions>
               <DialogOption>
@@ -2779,6 +2799,185 @@ return
                 <Say>True</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">who are you?</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>1</ID>
+            <Name>dMerchtalk</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cEgo:Ummmm....Hello-
+cMerchant:I have ginseng, goji, dried scorpion, and all types of 'Jiu'!
+cEgo:....Ok.
+return
+@1
+cMerchant:It's what we call wine.
+return
+@2
+cMerchant:Yes I do and it costs 200 rmb.
+cEgo:All I have is 30.
+cMerchant:..I can give you this mysterious black pill.
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Um what exactly is 'Jiu'?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Do you have any sleep medicine?</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>2</ID>
+            <Name>dMaotalk</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cEgo:Are you the guardian of this building?
+cMao:Yes but there's pretty much nothing here to guard anymore.
+return
+@1
+cMao:Why thank you. You look ummm decently human.
+return
+@2
+cMao:What for?
+cEgo:To protect myself.
+cMao:Hmmm..Sure why not. Its not like I've used it in a while.
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">You look very pretty</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Can I borrow your dagger?</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>3</ID>
+            <Name>dJunetalk</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cEgo:Hello.
+cJune:Don't talk to me.
+return
+@1
+cJune:I said don't talk to me.
+return
+@2
+cJune:SHUT UP SHUT UP SHUT UP SHUT UP!!!
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Where am I</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">I just want some help.</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>4</ID>
+            <Name>dFeitalk</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cEgo:That snake is scary
+cFei:It sure is.
+return
+@1
+cFei: No but it tried to. I wish someone would get rid of it.
+return
+@2
+cFei:It would help a bunch. Say if you did, you could make snake wine.
+cEgo:Snake wine?
+cFei:Dude it's literally liquid gold here.
+cEgo:It's that good?
+cFei:It's the best!
+cEgo:Maybe I will.
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Has it attacked you?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">If I got rid of it, would that help?</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>5</ID>
+            <Name>dPaotalk</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cEgo:Hiya.
+cPao:What are you here for?
+cEgo:Nothing really.
+return
+@1
+cPao:It leads to the lunar rabbit road.
+cEgo:Lunar rabbit road?
+cPao:A stone road that takes you to the Lunar rabbit queens castle.
+return
+@2
+cPao:It's the most beautiful castle in Tiantang.
+return
+@3
+cPao:You ask a lot of questions.
+cEgo: Yeah.
+cPao: Tiantang is the heaven of temples and thats where you are now.
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Where does this entrance lead to?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Is the castle beautiful?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text>Tiantang?</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -4465,6 +4664,21 @@ return
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="22" Width="21" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\apoteat1\Documents\AP_tutorial\My sprites\iPill.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>21</ImportHeight>
+                      <ImportWidth>21</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="New sprites">
@@ -4565,9 +4779,9 @@ return
               <SpriteFolder Name="pickupsprites">
                 <SubFolders />
                 <Sprites>
-                  <Sprite Slot="17" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                  <Sprite Slot="17" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName />
+                      <FileName>C:\Users\apoteat1\Downloads\cEgo_Animation_04\cEgo_Animation_01.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>50</ImportHeight>
@@ -4580,9 +4794,9 @@ return
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="18" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                  <Sprite Slot="18" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName />
+                      <FileName>C:\Users\apoteat1\Downloads\cEgo_Animation_04\cEgo_Animation_02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>50</ImportHeight>
@@ -4595,9 +4809,9 @@ return
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="19" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                  <Sprite Slot="19" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName />
+                      <FileName>C:\Users\apoteat1\Downloads\cEgo_Animation_04\cEgo_Animation_02.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>50</ImportHeight>
@@ -4610,9 +4824,9 @@ return
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="20" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                  <Sprite Slot="20" Width="25" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName />
+                      <FileName>C:\Users\apoteat1\Downloads\cEgo_Animation_04\cEgo_Animation_04.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>50</ImportHeight>

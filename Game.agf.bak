@@ -4841,7 +4841,7 @@ stop
                   </Sprite>
                 </Sprites>
               </SpriteFolder>
-              <SpriteFolder Name="torch">
+              <SpriteFolder Name="Objects">
                 <SubFolders />
                 <Sprites>
                   <Sprite Slot="23" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">

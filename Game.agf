@@ -4841,7 +4841,7 @@ stop
                   </Sprite>
                 </Sprites>
               </SpriteFolder>
-              <SpriteFolder Name="torch">
+              <SpriteFolder Name="Objects">
                 <SubFolders />
                 <Sprites>
                   <Sprite Slot="23" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
@@ -5435,6 +5435,21 @@ stop
               <RemapToRoomPalette>False</RemapToRoomPalette>
               <ImportMethod>LeaveAsIs</ImportMethod>
               <ImportAlphaChannel>False</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="26" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\apoteat1\Documents\treasure chest\redchest.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>32</ImportHeight>
+              <ImportWidth>32</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>False</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
         </Sprites>
